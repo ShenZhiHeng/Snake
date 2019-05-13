@@ -1,9 +1,0 @@
-	double	q11 = qnb.q0*qnb.q0, q12 = qnb.q0*qnb.q1, q13 = qnb.q0*qnb.q2, q14 = qnb.q0*qnb.q3, 
-		q22 = qnb.q1*qnb.q1, q23 = qnb.q1*qnb.q2, q24 = qnb.q1*qnb.q3,     
-		q33 = qnb.q2*qnb.q2, q34 = qnb.q2*qnb.q3,  
-		q44 = qnb.q3*qnb.q3;
-	CVect3 att;
-	att.i = asinEx(2*(q34+q12));
-	att.j = atan2Ex(-2*(q24-q13), q11-q22-q33+q44);
-	att.k = atan2Ex(-2*(q23-q14), q11-q22+q33-q44);
-	return att;
